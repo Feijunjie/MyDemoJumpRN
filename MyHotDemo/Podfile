@@ -1,0 +1,37 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'MyHotDemo' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for MyHotDemo
+
+  target 'MyHotDemoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'MyHotDemoUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+pod 'yoga', :path => './MyHotDemo/react-native/node_modules/react-native/ReactCommon/yoga'
+pod 'React', :path => './MyHotDemo/react-native/node_modules/react-native', :subspecs => [
+'Core',
+'RCTActionSheet',
+'RCTGeolocation',
+'RCTImage',
+'RCTNetwork',
+'RCTPushNotification',
+'RCTSettings',
+'RCTText',
+'RCTVibration',
+'RCTWebSocket',
+'DevSupport',
+'CxxBridge'
+# needed for debugging
+# Add any other subspecs you want to use in your project
+]
+end
